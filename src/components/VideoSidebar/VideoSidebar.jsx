@@ -48,4 +48,5 @@ const VideoSidebar = ({muted, user, likes, comments, shares, audioOwnerImg, onUn
     )
 }
 
+
 export default VideoSidebar
