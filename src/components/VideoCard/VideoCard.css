@@ -1,0 +1,13 @@
+.video_card{
+    background-color: black;
+    height: 100%;
+    scroll-snap-align: start;
+    position: relative;
+}
+
+.video{
+    /*Esto sirve para que se expanda en todo el div de video card y se ajuste a las dimensiones de este div*/
+    object-fit: fill;
+    width: 100%;
+    height: 100%;
+}
