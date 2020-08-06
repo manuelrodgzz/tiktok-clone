@@ -50,7 +50,7 @@ const VideoCard = ({src, desc, user, muted, likes, comments, shares, audioOwnerI
             player.current.currentTime = 0
         }}>
             <div ref={video_card} onClick={handleClick} className='video_card'>
-                <video muted={muted} ref={player} loop className='video' src={src}/>
+                <video playsInline muted={muted} ref={player} loop className='video' src={src}/>
                 <VideoFooter desc={desc} user={user.name}/>
                 <VideoSidebar audioOwnerImg={audioOwnerImg} user={user} likes={likes} shares={shares} comments={comments} muted={muted} onMute={handleMute} onUnmute={handleUnmute}/>
             </div>
