@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import './App.css';
 import VideoCard from './components/VideoCard'
+import Div100vh from 'react-div-100vh'
 
 const videos = [
   {
@@ -53,14 +54,6 @@ const videos = [
   },
 ]
 
-//Con esto se intenta arreglar el error de que no se ve bien en iOS
-window.onresize = function() {
-  document.body.height = window.innerHeight;
-}
-
-window.onresize()
-//---------------------------------------------------------------
-
 function App() {
 
   const [muted, setMuted] = useState(true)
@@ -74,6 +67,7 @@ function App() {
   }
 
   return (
+    <Div100vh>
     <div className="app">
       <div className='app_video'>
         {videos.map((video, index) => (
@@ -93,6 +87,7 @@ function App() {
         ))}
       </div>
     </div>
+    </Div100vh>
   );
 }
 
