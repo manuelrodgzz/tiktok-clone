@@ -9,9 +9,9 @@ const VideoFooter = ({desc, user}) => {
         <div className='video_footer'>
             <strong>@{user}</strong>
             <p>
-                {arrayDesc.map(word => {
+                {arrayDesc.map((word, index) => {
                 if(word[0] === '#' || word[0] === '@')
-                    return (<strong>{`${word} `}</strong>)
+                    return (<strong key={index + word}>{`${word} `}</strong>)
                 else
                     return (word + ' ')
 

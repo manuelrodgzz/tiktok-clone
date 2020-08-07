@@ -1,5 +1,6 @@
 import React , {useState, useRef, useEffect}from 'react'
 import VisibilitySensor from 'react-visibility-sensor'
+import PlayArrowIcon from '@material-ui/icons/PlayArrow'
 import VideoFooter from '../VideoFooter'
 import VideoSidebar from '../VideoSidebar'
 import './VideoCard.css'
@@ -9,7 +10,6 @@ const VideoCard = ({src, desc, user, muted, likes, comments, shares, audioOwnerI
     const [playing, setPlaying] = useState(false)
 
     const player = useRef()
-    const video_card = useRef()
 
     const handleClick = () => {
         
@@ -44,12 +44,18 @@ const VideoCard = ({src, desc, user, muted, likes, comments, shares, audioOwnerI
 
     }, [playing, muted])
 
+    if(player.current) console.log(player.current.paused);
+    else console.log('nada jeje')
+
     return(
-        <VisibilitySensor onChange={(isVisible) => {
+        <VisibilitySensor partialVisibility={true} offset={{top: 10, bottom: 10}} onChange={(isVisible) => {
             setPlaying(isVisible)
             player.current.currentTime = 0
         }}>
-            <div ref={video_card} onClick={handleClick} className='video_card'>
+            <div onClick={handleClick} className='video_card'>
+                {/* <div className={`pause_screen ${player.current && player.current.paused ? 'hidden' : ''}`}>
+                    <PlayArrowIcon fontSize='large' className='play_icon'/>
+                </div> */}
                 <video playsInline muted={muted} ref={player} loop className='video' src={src}/>
                 <VideoFooter desc={desc} user={user.name}/>
                 <VideoSidebar audioOwnerImg={audioOwnerImg} user={user} likes={likes} shares={shares} comments={comments} muted={muted} onMute={handleMute} onUnmute={handleUnmute}/>

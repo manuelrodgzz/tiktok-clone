@@ -70,7 +70,7 @@ function App() {
       <div className='app_video'>
         {videos.map((video, index) => (
           <VideoCard 
-            key={index}
+            key={index + video.user.name}
             onMute={handleMute} 
             onUnmute={handleUnmute} 
             muted={muted} 
