@@ -44,8 +44,6 @@ const VideoCard = ({src, desc, user, muted, likes, comments, shares, audioOwnerI
 
     }, [playing, muted])
 
-    if(player.current) console.log(player.current.paused);
-    else console.log('nada jeje')
 
     return(
         <VisibilitySensor partialVisibility={true} offset={{top: 10, bottom: 10}} onChange={(isVisible) => {
@@ -53,9 +51,9 @@ const VideoCard = ({src, desc, user, muted, likes, comments, shares, audioOwnerI
             player.current.currentTime = 0
         }}>
             <div onClick={handleClick} className='video_card'>
-                {/* <div className={`pause_screen ${player.current && player.current.paused ? 'hidden' : ''}`}>
+                <div className={`pause_screen ${playing ? 'hidden' : ''}`}>
                     <PlayArrowIcon fontSize='large' className='play_icon'/>
-                </div> */}
+                </div>
                 <video playsInline muted={muted} ref={player} loop className='video' src={src}/>
                 <VideoFooter desc={desc} user={user.name}/>
                 <VideoSidebar audioOwnerImg={audioOwnerImg} user={user} likes={likes} shares={shares} comments={comments} muted={muted} onMute={handleMute} onUnmute={handleUnmute}/>

@@ -18,16 +18,17 @@
     height: 100%;
     background-color: black;
     opacity: .6;
-    transition: all .2s linear;
+    transition: all .1s linear;
+    text-align: center;
+    display: grid;
+    place-items: center;
 }
 
 .hidden{
     opacity: 0;
-    transition: all .2s linear;
+    transition: all .1s linear;
 }
 
 .play_icon{
-    display: flex;
-    position: absolute;
-    left: 1;
+    color: white;
 }
