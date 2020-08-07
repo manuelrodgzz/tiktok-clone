@@ -8,14 +8,12 @@ html{
   background-color: black;
   display: grid;
   place-items: center;
-  height: 100vh;
 }
 
 
 .app_video{
   position: relative;
   border-radius: 20px;
-  height: 100vh;
   width: 100%;
   max-width: 400px;
   max-height: 800px;

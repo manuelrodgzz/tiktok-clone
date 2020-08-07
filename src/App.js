@@ -67,9 +67,9 @@ function App() {
   }
 
   return (
-    <Div100vh>
     <div className="app">
       <div className='app_video'>
+      <Div100vh>
         {videos.map((video, index) => (
           <VideoCard 
             key={index + video.user.name}
@@ -85,9 +85,9 @@ function App() {
             audioOwnerImg={video.audioOwnerImg}
             />
         ))}
+      </Div100vh>
       </div>
     </div>
-    </Div100vh>
   );
 }
 
