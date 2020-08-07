@@ -53,6 +53,14 @@ const videos = [
   },
 ]
 
+//Con esto se intenta arreglar el error de que no se ve bien en iOS
+window.onresize = function() {
+  document.body.height = window.innerHeight;
+}
+
+window.onresize()
+//---------------------------------------------------------------
+
 function App() {
 
   const [muted, setMuted] = useState(true)
