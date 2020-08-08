@@ -5,7 +5,7 @@ import VideoFooter from '../VideoFooter'
 import VideoSidebar from '../VideoSidebar'
 import './VideoCard.css'
 
-const VideoCard = ({src, desc, user, muted, likes, comments, shares, audioOwnerImg, onMute, onUnmute}) => {
+const VideoCard = ({src, desc, user, muted, likes, comments, shares, audio, onMute, onUnmute}) => {
 
     const [playing, setPlaying] = useState(false)
 
@@ -55,8 +55,8 @@ const VideoCard = ({src, desc, user, muted, likes, comments, shares, audioOwnerI
                     <PlayArrowIcon fontSize='large' className='play_icon'/>
                 </div>
                 <video playsInline muted={muted} ref={player} loop className='video' src={src}/>
-                <VideoFooter desc={desc} user={user.name}/>
-                <VideoSidebar audioOwnerImg={audioOwnerImg} user={user} likes={likes} shares={shares} comments={comments} muted={muted} onMute={handleMute} onUnmute={handleUnmute}/>
+                <VideoFooter desc={desc} user={user.name} audioTitle={audio.title}/>
+                <VideoSidebar audioOwnerImg={audio.ownerImg} user={user} likes={likes} shares={shares} comments={comments} muted={muted} onMute={handleMute} onUnmute={handleUnmute}/>
             </div>
         </VisibilitySensor>
     )
