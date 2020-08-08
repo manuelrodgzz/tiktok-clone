@@ -2,7 +2,7 @@ import React from 'react'
 import MusicNoteIcon from '@material-ui/icons/MusicNote'
 import './VideoFooter.css'
 
-const VideoFooter = ({desc, user, audioTitle}) => {
+const VideoFooter = ({videoPlaying, desc, user, audioTitle}) => {
 
     const arrayDesc = desc.split(' ')
 
@@ -22,13 +22,13 @@ const VideoFooter = ({desc, user, audioTitle}) => {
                     })}
                 </p>
             </div>
-            <div className='sound_caroussel'>
+            <div className={`sound_caroussel`}>
                 <MusicNoteIcon fontSize='small' />
                 <div className='sound_title_container'>
-                    <div className='sound_title_1'>
+                    <div className={`sound_title_1 ${!videoPlaying ? 'animation_pause' : ''}`}>
                         {audioTitle}
                     </div>
-                    <div className='sound_title_2'>
+                    <div className={`sound_title_2 ${!videoPlaying ? 'animation_pause' : ''}`}>
                         {audioTitle}
                     </div>
                 </div>

@@ -55,8 +55,8 @@ const VideoCard = ({src, desc, user, muted, likes, comments, shares, audio, onMu
                     <PlayArrowIcon fontSize='large' className='play_icon'/>
                 </div>
                 <video playsInline muted={muted} ref={player} loop className='video' src={src}/>
-                <VideoFooter desc={desc} user={user.name} audioTitle={audio.title}/>
-                <VideoSidebar audioOwnerImg={audio.ownerImg} user={user} likes={likes} shares={shares} comments={comments} muted={muted} onMute={handleMute} onUnmute={handleUnmute}/>
+                <VideoFooter videoPlaying={playing} desc={desc} user={user.name} audioTitle={audio.title}/>
+                <VideoSidebar videoPlaying={playing} audioOwnerImg={audio.ownerImg} user={user} likes={likes} shares={shares} comments={comments} muted={muted} onMute={handleMute} onUnmute={handleUnmute}/>
             </div>
         </VisibilitySensor>
     )

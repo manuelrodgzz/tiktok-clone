@@ -6,7 +6,7 @@ import VolumeOffIcon from '@material-ui/icons/VolumeOff'
 import VolumeUpIcon from '@material-ui/icons/VolumeUp';
 import './VideoSidebar.css'
 
-const VideoSidebar = ({muted, user, likes, comments, shares, audioOwnerImg, onUnmute, onMute}) => {
+const VideoSidebar = ({videoPlaying, muted, user, likes, comments, shares, audioOwnerImg, onUnmute, onMute}) => {
 
     //Cuando se de click en el icono de mute o unmute envio el evento para poder evitar la propagacion de click al video
 
@@ -38,7 +38,7 @@ const VideoSidebar = ({muted, user, likes, comments, shares, audioOwnerImg, onUn
             </div>
             <div className='sidebar_button'>
                 <div className={`cd_icon`}>
-                    <img src={audioOwnerImg} alt='audio-owner'/>
+                    <img className={!videoPlaying ? 'animation_pause' : ''} src={audioOwnerImg} alt='audio-owner'/>
                 </div>
             </div>
             <div className='sidebar_button'>

@@ -58,17 +58,14 @@
     vertical-align: middle;
 }
 
-.pause_animation{
-    -webkit-animation-play-state:paused;
-    -moz-animation-play-state:paused;
-    -o-animation-play-state:paused; 
-    animation-play-state:paused;
-}
-
 .flip{
     -moz-transform: scale(-1, 1);
     -webkit-transform: scale(-1, 1);
     -o-transform: scale(-1, 1);
     -ms-transform: scale(-1, 1);
     transform: scale(-1, 1);
+}
+
+.animation_pause{
+    animation-play-state: paused;
 }

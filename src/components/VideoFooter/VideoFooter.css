@@ -50,3 +50,7 @@
     position: relative;
     left: 180px;
 }
+
+.animation_pause{
+    animation-play-state: paused;
+}
