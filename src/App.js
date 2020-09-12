@@ -53,14 +53,14 @@ const videos = [
     src: '/media/godin.mp4',
     user: {
       name: 'caudillovlogs',
-      img: 'https://p16-sign-va.tiktokcdn.com/musically-maliva-obj/6822ac6734ac61fd46bfb4ec7cfcc50a~c5_100x100.jpeg?x-expires=1599566400&x-signature=XPHRd%2BHKC3vu9nISpCr%2Bj5mZdv0%3D'
+      img: 'https://p16-sign-sg.tiktokcdn.com/musically-maliva-obj/6822ac6734ac61fd46bfb4ec7cfcc50a~c5_720x720.jpeg?x-expires=1600030800&x-signature=M7HCE2ExJ1n9HAWmyo9Y9v8uwPc%3D'
     },
     description: 'lo que callamos los de sistemas #fyp #fotos2020 #biral #godin #sistemas #office #hsbc',
     likes: 4696,
     comments: 77,
     shares: 214,
     audio:{
-      ownerImg: 'https://p16-sign-va.tiktokcdn.com/musically-maliva-obj/6822ac6734ac61fd46bfb4ec7cfcc50a~c5_100x100.jpeg?x-expires=1599566400&x-signature=XPHRd%2BHKC3vu9nISpCr%2Bj5mZdv0%3D',
+      ownerImg: 'https://p16-sign-sg.tiktokcdn.com/musically-maliva-obj/6822ac6734ac61fd46bfb4ec7cfcc50a~c5_720x720.jpeg?x-expires=1600030800&x-signature=M7HCE2ExJ1n9HAWmyo9Y9v8uwPc%3D',
       title: 'sonido original - caudillovlogs'
     }
   },
