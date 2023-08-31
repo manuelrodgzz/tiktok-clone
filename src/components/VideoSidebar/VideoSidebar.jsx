@@ -18,10 +18,15 @@ const VideoSidebar = ({videoPlaying, muted, user, likes, comments, shares, audio
         onMute(e)
     }
 
+    const onImageError = (e) => {
+        const FALLBACK_USER_IMG = '/media/user-default.png'
+        e.target.src = FALLBACK_USER_IMG
+    }
+
     return(
         <div className='video_sidebar'>
             <div className='sidebar_button'>
-                <img src={user.img} alt='user-img' className='user_img'/>
+                <img src={user.img} alt='user-img' className='user_img' onError={onImageError}/>
                 <div className='plus_icon'>+</div>
             </div>
             <div className='sidebar_button'>
@@ -38,7 +43,7 @@ const VideoSidebar = ({videoPlaying, muted, user, likes, comments, shares, audio
             </div>
             <div className='sidebar_button'>
                 <div className={`cd_icon`}>
-                    <img className={!videoPlaying ? 'animation_pause' : ''} src={audioOwnerImg} alt='audio-owner'/>
+                    <img className={!videoPlaying ? 'animation_pause' : ''} src={audioOwnerImg} alt='audio-owner' onError={onImageError}/>
                 </div>
             </div>
             <div className='sidebar_button'>

@@ -9,14 +9,12 @@
 }
 
 .video_sidebar{
-    display: flex;
     position: absolute;
     color: white;
     bottom: 0;
-    margin-left: 87%;
     flex-wrap: wrap;
     text-align: center;
-    justify-content: center; /*Me sirvió para alinear al centro la img de perfil y el icono de disco girando*/
+    right: 2%;
 }
 
 .plus_icon{
@@ -25,8 +23,8 @@
     background-color: #fe2c55;
     width: 15px;
     height: 15px;
-    bottom: 89%;
-    left: 38%;
+    bottom: -13%;
+    left: 32%;
     font-size: .6em;
 }
 
@@ -38,7 +36,10 @@
 }
 
 .sidebar_button{
+    position: relative;
     margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
 }
 
 .cd_icon{
