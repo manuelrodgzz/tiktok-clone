@@ -8,17 +8,14 @@ html{
   background-color: black;
   display: grid;
   place-items: center;
-  height: 100vh;
+  height: 100dvh;
   width: 100vw;
 }
 
 
 .app_video{
   position: relative;
-  border-radius: 20px;
-  /* width: 100%; */
-  /* max-width: 400px; */
-  /* max-height: 800px; */
+  height: 100%;
   overflow: scroll;
   scroll-snap-type: y mandatory;
 }

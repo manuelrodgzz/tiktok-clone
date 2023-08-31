@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 import './App.css';
 import VideoCard from './components/VideoCard'
-import Div100vh from 'react-div-100vh'
 
 const videos = [
   {
@@ -81,7 +80,7 @@ function App() {
   return (
     <div className="app">
       <div className='app_video'>
-      <Div100vh>
+      {/* <Div100vh> */}
         {videos.map((video, index) => (
           <VideoCard 
             key={index + video.user.name}
@@ -97,7 +96,7 @@ function App() {
             audio={video.audio}
             />
         ))}
-      </Div100vh>
+      {/* </Div100vh> */}
       </div>
     </div>
   );
